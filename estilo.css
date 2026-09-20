@@ -1,0 +1,1037 @@
+/* ==========================================================================
+   1. ESTILOS GLOBAIS E RESET
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+
+body {
+    background-color: #fcf6f9;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #3e4756;
+}
+.rodape {
+    font-size: 1.70em;
+}
+/* ==========================================================================
+   2. MENU DE NAVEGAÇÃO
+   ========================================================================== */
+
+nav {
+    background: rgba(255, 182, 193, 0.689);
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    box-shadow: 0 4px 25px rgba(143, 5, 90, 0.15);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #6a0443;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.70em;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #5c3a21;
+    color: #ffffff;
+}
+
+/* Logotipo do menu */
+
+.logo {
+    color: #8f055a;
+    font-size: 1.70em;
+    font-weight: bold;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-destaque {
+    color: #dd12f3;
+    font-size: 1.50em;
+}
+
+.badge-codigo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    border: 3px solid #ffcc00f7;
+    background-color: #ffffff;
+    color: rgba(252, 134, 151, 0.995);
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 0 0 5px #8f055a;
+}
+
+.estrelas {
+    font-size: 10px;
+    color: #8f055a;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   3. CONTEÚDO PRINCIPAL E TEXTOS
+   ========================================================================== */
+
+.container {
+    max-width: 1100px;
+    width: 95%;
+    margin: 30px auto;
+    padding: 35px 45px;
+
+    background: rgba(143, 5, 90, 0.08);
+    border: 1px solid rgba(255, 182, 193, 0.4);
+    border-radius: 15px;
+
+    box-shadow: 0 15px 35px rgba(143, 5, 90, 0.08);
+}
+
+h1,
+h2,
+h3 {
+    color: #8f055a;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(1.9em, 4vw, 2.6em);
+    border-bottom: 3px solid rgba(255, 182, 193, 0.4);
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.7em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: justify;
+    color: #3e4756;
+    font-size: 1.7em;
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main ul {
+    font-size: 1.5em;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    color: #3e4756;
+}
+
+main li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* ==========================================================================
+   4. TABELAS DA PÁGINA DE SERVIÇOS
+   ========================================================================== */
+
+.especialidade {
+    font-size: 1.6em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 5px 0;
+
+    font-size: 1.5em;
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+th,
+td {
+    border: 1px solid rgba(255, 182, 193, 0.4);
+    padding: 10px;
+    text-align: left;
+    font-size: 1.10em;
+}
+
+th {
+    background-color: #8f055a;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #fdf8fa;
+}
+
+/* ==========================================================================
+   5. PÁGINA DE CONTACTO
+   ========================================================================== */
+
+.grade-contacto {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+
+    align-items: stretch;
+}
+
+.coluna-esquerda,
+.coluna-direita {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cartões da coluna esquerda */
+
+.item-contacto {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+font-size: 1.50em;
+    min-height: 110px;
+    padding: 24px 28px;
+
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(255, 182, 193, 0.3);
+    border-left: 6px solid #8f055a;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(143, 5, 90, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.item-contacto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(143, 5, 90, 0.12);
+}
+
+.item-contacto div {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-contacto strong {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #8f055a;
+    font-size: 1.25em;
+}
+
+/* Ícones de contacto */
+
+.icone-contacto {
+    min-width: 35px;
+    margin-top: 4px;
+
+    color: #8f055a;
+    font-size: 1.75em;
+}
+
+/* Textos e links dos contactos */
+
+.item-contacto span,
+.item-contacto a,
+.link-acao {
+    display: block;
+    margin-bottom: 5px;
+    color: #3e4756;
+    font-size: 1.30em;
+    text-decoration: none;
+}
+
+.item-contacto a:hover,
+.link-acao:hover {
+    color: #dd12f3;
+    text-decoration: underline;
+}
+
+/* Cartão de telefones */
+
+.chamada {
+    border-left-color: #8f055a;
+}
+
+.chamada .icone-contacto {
+    color: #8f055a;
+    font-size: 1.30em;
+}
+
+/* Cartão de WhatsApp */
+
+.whatsapp {
+    border-left-color: #25d366;
+    background: rgba(37, 211, 102, 0.07);
+}
+
+.whatsapp .icone-contacto {
+    color: #25d366;
+}
+
+.whatsapp a {
+    color: #159947;
+    font-weight: bold;
+    font-size: 1.18em;
+}
+
+.whatsapp a:hover {
+    color: #0a7432;
+}
+
+/* Cartão de horário */
+
+.horario {
+    border-left-color: #5c3a21;
+    font-size: 1.50em;
+}
+
+.horario .icone-contacto {
+    color: #5c3a21;
+    font-size: 1.40em;
+}
+
+/* Caixa do formulário */
+
+.seccao-comentarios {
+    height: 100%;
+    padding: 28px 34px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(255, 182, 193, 0.3);
+    border-left: 6px solid #8f055a;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(143, 5, 90, 0.05);
+    font-size: 1.30em;
+}
+
+.seccao-comentarios h2 {
+    margin-top: 0;
+    margin-bottom: 22px;
+    font-size: 1.90em;
+}
+
+.form-comentario {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 1.30em;
+}
+
+.campo-grupo label {
+    font-size: 1.20em;
+    font-weight: 600;
+    color: #8f055a;
+}
+
+.campo-grupo input,
+.campo-grupo textarea {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid rgba(255, 182, 193, 0.6);
+    border-radius: 7px;
+
+    background-color: #ffffff;
+    color: #3e4756;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.30em;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo-grupo textarea {
+    width: 100% !important;
+    min-height: 200px !important;
+    height: 340px !important;
+    resize: vertical;
+    font-size: 1.30em;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.campo-grupo input:focus,
+.campo-grupo textarea:focus {
+    border-color: #dd12f3;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(221, 18, 243, 0.14);
+    font-size: 1.20em;
+}
+
+/* Botão Submeter */
+
+.btn-comentar {
+    align-self: flex-start;
+
+    border: none;
+    border-radius: 7px;
+    padding: 13px 24px;
+
+    background-color: #8f055a;
+    color: #ffffff;
+
+    cursor: pointer;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.70em;
+    font-weight: bold;
+
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-comentar:hover {
+    background-color: #dd12f3;
+    transform: translateY(-2px);
+}
+
+.btn-comentar:active {
+    transform: translateY(0);
+}
+
+.btn-comentar i {
+    margin-right: 8px;
+}
+
+/* ==========================================================================
+   6. PÁGINA DE MULTIMÍDIA
+   ========================================================================== */
+
+.media-card {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid rgba(255, 182, 193, 0.2);
+    border-radius: 8px;
+}
+.image.grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.image.grid figure{
+    max-width: 350px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+.image.grid img {
+    width: 100%;
+}
+.image.grid figcaption {
+    font-size: 22px !important;
+    color: black !important;
+    font-style: normal !important;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.media-card h2 {
+font-size: 2.30em;
+
+}
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto 0;
+
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(143, 5, 90, 0.05);
+}
+
+.video-grid {
+display: flex;
+gap: 20px;
+margin-top: 20px;
+justify-content: center;
+flex-wrap: wrap;
+
+}
+.video-grid video {
+width: 100%;
+max-width: 700px;
+flex: 1;
+min-width: 280px;
+margin: 0;
+
+}
+
+audio {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* ==========================================================================
+   7. FOOTER E BOTÕES
+   ========================================================================== */
+
+footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 20px 40px;
+
+    background: rgba(255, 182, 193, 0.689);
+    color: #8f055a;
+
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 700;
+
+    box-shadow: 0 -4px 25px rgba(143, 5, 90, 0.1);
+}
+
+footer p {
+    margin: 0;
+    color: #8f055a;
+    text-align: center;
+    font-size: 1em;
+}
+
+.btn-download {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 12px 24px;
+
+    background-color: #800020;
+    color: #ffffff;
+
+    border-radius: 10px;
+    text-decoration: none;
+
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #5c3a21;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   8. PÁGINA SOBRE
+   ========================================================================== */
+
+.seccao-estudante {
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.cartao-perfil {
+    display: flex;
+    align-items: stretch;
+    gap: 25px;
+    padding: 0px;
+    background: #ffffff;
+    border: 1px solid rgba(255, 182, 193, 0.4);
+    border-left: 8px solid #8f055a;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(143, 5, 90, 0.05);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.foto-perfil-contentor {
+    width: 210px;
+    min-width: 210px;
+    background: #8f055a;
+    line-height: 0;
+    overflow: hidden;
+    display: flex;
+
+    border: 3px solid #8f055a;
+    border-radius: 12px;
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.dados-estudante {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dados-estudante h3 {
+    margin: 0 0 5px;
+    color: #8f055a;
+    font-size: 2.1em;
+}
+
+.subtitulo-estudante {
+    margin-bottom: 5px;
+    color: #dd12f3;
+    font-family: Arial, sans-serif;
+    font-size: 1.55em;
+    font-weight: bold;
+}
+.detalhes-academicos{
+    margin-top: 0;
+    padding-top: 0;
+}
+.detalhes-academicos p {
+    margin: 4px 0;
+    color: #3e4756;
+    font-size: 1.55em;
+}
+
+.detalhes-academicos strong {
+    color: #8f055a;
+}
+
+.conteudo-sobre {
+    border-top: 4px dashed rgba(143, 5, 90, 0.2);
+}
+
+/* ==========================================================================
+   9. PÁGINA INICIAL E EMBLEMA
+   ========================================================================== */
+
+.grade-inicio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.texto-inicio {
+    flex: 1.2;
+}
+
+.imagem-inicio-contentor {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.logotipo-institucional {
+    width: 100%;
+    max-width: 320px;
+    padding: 40px 35px;
+
+    background: #ffffff;
+    border: 1px solid rgba(143, 5, 90, 0.1);
+    border-radius: 16px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    box-shadow: 0 15px 35px rgba(143, 5, 90, 0.06);
+}
+
+.circulo-emblema {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    border: 4px double #ffd700;
+    border-radius: 50%;
+
+    background: #ffffff;
+    box-shadow: 0 0 0 6px #8f055a,
+                inset 0 0 17px rgba(143, 5, 90, 0.15);
+}
+
+.simbolo-codigo {
+    color: rgba(252, 134, 151, 0.995);
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.estrelas-emblema {
+    margin-top: 3px;
+
+    color: #8f055a;
+    font-size: 1.7rem;
+    letter-spacing: 3px;
+
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.logotipo-institucional h2 {
+    margin: 0;
+
+    color: #8f055a;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logotipo-institucional span {
+    color: #3e4756;
+
+    font-family: Arial, sans-serif;
+    font-size: 0.85em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   10. PÁGINA DE SERVIÇOS
+   ========================================================================== */
+
+.pagina-servicos .seccao-certificacao {
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 25px;
+
+    border-top: 2px dashed rgba(143, 5, 90, 0.2);
+}
+
+.pagina-servicos .titulo-certificacao {
+    margin-bottom: 25px;
+}
+
+.pagina-servicos .titulo-certificacao h2 {
+    margin-top: 0;
+    font-size: 2em;
+}
+
+.pagina-servicos .certificacao-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+
+    width: 100%;
+    font-size: 1.3em;
+}
+
+.pagina-servicos .cartao-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 250px;
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 182, 193, 0.4);
+    border-left: 6px solid #8f055a;
+    border-radius: 12px;
+
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(143, 5, 90, 0.05);
+
+    transition: all 0.3s ease;
+}
+
+.pagina-servicos .cartao-info:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(143, 5, 90, 0.12);
+}
+
+.pagina-servicos .icone-cartao {
+    margin-bottom: 8px;
+    font-size: 2.3em;
+}
+
+.pagina-servicos .cartao-info h3 {
+    margin-bottom: 10px;
+    color: #8f055a;
+    font-size: 1.35em;
+}
+
+.pagina-servicos .cartao-info p {
+    flex: 1;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.05em;
+}
+
+.pagina-servicos .botao-cartao,
+.pagina-servicos .botao-principal {
+    display: inline-block;
+    padding: 11px 22px;
+
+    background-color: #800020;
+    color: #ffffff;
+
+    border-radius: 10px;
+    text-decoration: none;
+
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.pagina-servicos .botao-cartao:hover,
+.pagina-servicos .botao-principal:hover {
+    background-color: #5c3a21;
+    transform: translateY(-2px);
+}
+
+.pagina-servicos .guia-completo {
+    margin-top: 35px;
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 182, 193, 0.4);
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.pagina-servicos .guia-completo h2 {
+    margin-top: 0;
+}
+
+.pagina-servicos .guia-completo p {
+    text-align: center;
+}
+
+.pagina-servicos .botao-principal {
+    padding: 12px 25px;
+}
+
+/* ==========================================================================
+   11. RESPONSIVIDADE PARA TABLET E TELEMÓVEL
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 7px;
+    }
+
+    nav ul li a {
+        display: inline-block;
+        padding: 8px 10px;
+        font-size: 1.05em;
+    }
+
+    .logo {
+        font-size: 1.2em;
+    }
+
+    .badge-codigo {
+        width: 48px;
+        height: 48px;
+        font-size: 10px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.45em;
+    }
+
+    p {
+        font-size: 1.15em;
+    }
+
+    main ul {
+        font-size: 1.1em;
+    }
+
+    table {
+        margin: 5px 0;
+        font-size: 0.9em;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+
+    .grade-contacto {
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .coluna-esquerda,
+    .coluna-direita {
+        width: 100%;
+    }
+
+    .item-contacto {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .item-contacto strong {
+        font-size: 1.15em;
+    }
+
+    .item-contacto span,
+    .item-contacto a {
+        font-size: 1em;
+    }
+
+    .icone-contacto {
+        min-width: 28px;
+        font-size: 1.45em;
+    }
+
+    .seccao-comentarios {
+        padding: 22px 20px;
+    }
+
+    .seccao-comentarios h2 {
+        font-size: 1.65em;
+    }
+
+    .campo-grupo input,
+    .campo-grupo textarea {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    .btn-comentar {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .cartao-perfil {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .foto-perfil-contentor {
+        width: 180px;
+        height: 220px;
+    }
+
+    .dados-estudante {
+        width: 100%;
+    }
+
+    .dados-estudante h3 {
+        font-size: 1.7em;
+        text-align: center;
+    }
+
+    .subtitulo-estudante {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .detalhes-academicos p {
+        font-size: 1.1em;
+    }
+
+    .grade-inicio {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .texto-inicio,
+    .imagem-inicio-contentor {
+        width: 100%;
+    }
+
+    .pagina-servicos .certificacao-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pagina-servicos .cartao-info {
+        min-height: 220px;
+    }
+
+    .especialidade {
+        font-size: 1.2em;
+    }
+
+    footer {
+        padding: 16px 20px;
+    }
+}

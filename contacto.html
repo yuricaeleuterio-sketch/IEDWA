@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto - IEDWA</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- Biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="inicio.html" class="logo">
+        <span class="badge-codigo">
+            IEDWA
+            <div class="estrelas">★★★</div>
+        </span>
+
+        IEDWA<span class="logo-destaque">Portal</span>
+    </a>
+
+    <ul>
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="SobreNos.html">Sobre</a></li>
+        <li><a href="multimidia.html">Multimídia</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+
+    <h1>Fale Connosco</h1>
+
+    <div class="grade-contacto">
+
+        <!-- COLUNA ESQUERDA -->
+        <div class="coluna-esquerda">
+
+            <div class="item-contacto">
+                <i class="fa-solid fa-envelope icone-contacto"></i>
+
+                <div>
+                    <strong>E-mail Institucional</strong>
+
+                    <a href="mailto:suporte@iedwa.edu.mz">
+                        suporte@iedwa.edu.mz
+                    </a>
+                </div>
+            </div>
+
+            <div class="item-contacto chamada">
+                <i class="fa-solid fa-phone icone-contacto"></i>
+
+                <div>
+                    <strong>Contactos para Chamada</strong>
+
+                    <a href="tel:+258852407517">
+                        +258 85 240 7517
+                    </a>
+
+                    <a href="tel:+258834667105">
+                       +258 83 466 7105
+                    </a>
+
+                    <a href="tel:+258872645733">
+                       +258 87 264 5733
+                    </a>
+                </div>
+            </div>
+
+            <div class="item-contacto whatsapp">
+                <i class="fa-brands fa-whatsapp icone-contacto"></i>
+
+                <div>
+                    <strong>Contacto para WhatsApp</strong>
+
+                    <a href="https://wa.me/258852407517"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        +258 85 240 7517
+                    </a>
+                </div>
+            </div>
+
+            <div class="item-contacto horario">
+                <i class="fa-solid fa-clock icone-contacto"></i>
+
+                <div>
+                    <strong>Horário de Expediente</strong>
+
+                    <span>Segunda a Sexta:<br> 08:00 - 17:00</br></span>
+                    <span>Sábado: 08:00 - 12:00</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- COLUNA DIREITA -->
+        <div class="coluna-direita">
+
+            <div class="seccao-comentarios">
+
+                <h2>Deixe o seu Comentário</h2>
+
+                <!-- LINK DO FORMSPREE ATUALIZADO E COMPLETO AQUI -->
+                <form action="https://formspree.io/f/mwlpekln"
+                      method="POST"
+                      class="form-comentario">
+
+                    <div class="campo-grupo">
+                        <label for="nome">Nome</label>
+
+                        <!-- 'name' ajustado para o Formspree reconhecer o nome do remetente -->
+                        <input type="text"
+                               id="nome"
+                               name="name"
+                               placeholder="O seu nome completo"
+                               required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="email">E-mail</label>
+
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="exemplo@email.com"
+                               required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="mensagem">Mensagem</label>
+
+                        <!-- 'name' ajustado para o Formspree reconhecer o conteúdo da mensagem -->
+                        <textarea id="mensagem"
+                                  name="message"
+                                  rows="5"
+                                  placeholder="Escreva aqui a sua mensagem ou sugestão..."
+                                  required></textarea>
+                    </div>
+
+                    <!-- Assunto que aparecerá no seu e-mail -->
+                    <input type="hidden"
+                           name="_subject"
+                           value="Nova mensagem recebida no Portal IEDWA">
+
+                    <button type="submit" class="btn-comentar">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Submeter
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+ <div class="rodape">
+    <footer>
+        <p>2026 - Portal Web Educacional online.</p>
+    </footer>
+    </div>
+
+</body>
+</html>
